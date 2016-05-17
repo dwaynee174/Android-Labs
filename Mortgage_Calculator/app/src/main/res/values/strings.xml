@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Mortgage Calculator</string>
+    <string name="amount_borrowed">Amount Borrowed</string>
+    <string name="interest_rate">Interest Rate :</string>
+    <string name="loan_term">Loan Term</string>
+    <string name="tax_insurance">Taxes and Insurance</string>
+    <string name="calculate">Calculate</string>
+    <string name="monthly_payment">Monthly Payment</string>
+    <string name="fifteen_years">15 years</string>
+    <string name="twenty_years">20 years</string>
+    <string name="thirty_years">30 years</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <color name="mycolor">#CCFFCC</color>
+</resources>

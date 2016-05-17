@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ZooDirectoryApplication</string>
+    <string name="zoo_name">Zoobie Zoo</string>
+    <string name="zoo_phone">Call 111-111-1111</string>
+    <string name="information">Information</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="action_settings">Settings</string>
+</resources>

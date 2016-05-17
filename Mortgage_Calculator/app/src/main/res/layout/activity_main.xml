@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.csulb.android.mortgagecalculator.MainActivity"
+    android:background="@color/mycolor">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amount_borrowed"
+        android:id="@+id/textViewAmount"
+        android:textSize="15sp"
+        android:layout_alignBottom="@+id/editTextAmount"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewInterest"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/textViewAmount"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewAmount"
+        android:layout_alignEnd="@+id/textViewAmount"
+        android:text="@string/interest_rate"
+        android:textSize="15sp" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:indeterminate="false"
+        android:max="200"
+        android:layout_below="@+id/textViewInterest"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loan_term"
+        android:id="@+id/textViewLoan"
+        android:textSize="15sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/radioGroup" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fifteen_years"
+            android:id="@+id/radioButton15years"
+            android:checked="false"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twenty_years"
+            android:id="@+id/radioButton20years"
+            android:checked="false"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thirty_years"
+            android:id="@+id/radioButton30years"
+            android:checked="false"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tax_insurance"
+        android:id="@+id/checkBoxTaxes"
+        android:checked="false"
+        android:textSize="15sp"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_alignRight="@+id/seekBar"
+        android:layout_alignEnd="@+id/seekBar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        android:id="@+id/buttonCalculate"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:textColor="#343f7e"
+        android:background="#9ab891" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/monthly_payment"
+        android:id="@+id/textViewMonthlyPayment"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="57dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewDisplayPayment"
+        android:textSize="15sp"
+        android:layout_alignTop="@+id/textViewMonthlyPayment"
+        android:layout_alignRight="@+id/checkBoxTaxes"
+        android:layout_alignEnd="@+id/checkBoxTaxes" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textViewSeekbarProgress"
+        android:layout_toRightOf="@+id/textViewInterest"
+        android:layout_alignTop="@+id/textViewInterest"
+        android:layout_alignRight="@+id/checkBoxTaxes" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextAmount"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:textSize="15sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/textViewSeekbarProgress"
+        android:layout_alignEnd="@+id/textViewSeekbarProgress"
+        android:layout_toRightOf="@+id/buttonCalculate"
+        android:layout_toEndOf="@+id/buttonCalculate" />
+
+</RelativeLayout>
